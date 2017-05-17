@@ -1,0 +1,13 @@
+﻿<div>
+    <ul>
+
+        <li *ngFor="let baby of babies">
+            <div>
+                {{baby.name}}
+                <button type="button" (click)="eat(baby.id)">Eat</button>
+                <button pButton type="button" label="Click">Sleep</button>
+                <button  type="button" label="Click">Eat</button>
+            </div>
+        </li>
+    </ul>
+</div>
