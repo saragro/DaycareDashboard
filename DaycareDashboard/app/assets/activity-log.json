@@ -1,0 +1,29 @@
+﻿[
+  {
+    "babyName": "Avi Kaplan",
+    "babyId": "123456789",
+    "date":  "27/05/2017",
+    "activities": [
+      {
+        "actTime": "07:15",
+        "actType": "fed",
+        "remarks": "Formula 120ml"
+      },
+      {
+        "actTime": "08:00",
+        "actType": "changed",
+        "remarks": "no. 1 only"
+      },
+      {
+        "actTime": "10:10",
+        "actType": "slept",
+        "remarks": "seemed to have a bad dream"
+      },
+      {
+        "actTime": "13:00",
+        "actType": "woke up",
+        "remarks": "with a smile on his face"
+      }
+    ]
+  }
+]
