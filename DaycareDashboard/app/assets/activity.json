@@ -1,0 +1,25 @@
+﻿[
+  {
+    "babyId": "123456789",
+    "babyName": "Avi Kaplan",
+
+    "avialbleActivities": [
+      {
+        "actType": "EAT",
+        "isEnabled": "true"
+      },
+      {
+        "actType": "SLEEP",
+        "isEnabled": "true"
+      },
+      {
+        "actType": "WAKE_UP",
+        "isEnabled": "false"
+      },
+      {
+        "actType": "CHANGED",
+        "isEnabled": "true"
+      }
+    ]
+  }
+]

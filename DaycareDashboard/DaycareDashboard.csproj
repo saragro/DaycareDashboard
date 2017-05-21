@@ -72,6 +72,7 @@
     <Content Include="app\components\baby-log.component.css" />
     <Content Include="packages.config" />
     <Content Include="app\assets\log.json" />
+    <Content Include="app\assets\activity.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -97,12 +98,14 @@
     <TypeScriptCompile Include="app\models\activity-log.model.ts" />
     <TypeScriptCompile Include="app\models\activity-type.enum.ts" />
     <TypeScriptCompile Include="app\models\activity.model.ts" />
+    <TypeScriptCompile Include="app\models\available-acts.model.ts" />
     <TypeScriptCompile Include="app\models\baby-log.model.ts" />
     <TypeScriptCompile Include="app\models\baby.model.ts" />
     <TypeScriptCompile Include="app\models\baby-acts.model.ts" />
     <TypeScriptCompile Include="app\models\nanny.model.ts" />
     <TypeScriptCompile Include="app\modules\app.modules.ts" />
     <TypeScriptCompile Include="app\services\activity-log.service.ts" />
+    <TypeScriptCompile Include="app\services\add-activity.service.ts" />
     <TypeScriptCompile Include="app\systemjsconfig.ts" />
   </ItemGroup>
   <ItemGroup>

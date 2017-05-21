@@ -1,8 +1,7 @@
-﻿import { Component } from '@angular/core';
-import { ActivityLog } from '../models/activity-log.model';
-import { ActivityType } from '../models/activity-type.enum';
-import { Baby } from '../models/baby.model';
+﻿import { Component, OnInit } from '@angular/core';
+import { BabyActs } from '../models/baby-acts.model';
 import { ButtonModule } from 'primeng/primeng';
+import { BabyLog, ActivityType, AddActivityService } from '../index';
 
 
 @Component({
@@ -11,14 +10,24 @@ import { ButtonModule } from 'primeng/primeng';
     //styleUrls: ['./app/components/add-activity.component.css'],
 })
 export class AddActivityComponent {
-    babies: Baby[] = [
-        { id: "123", name: "Ari", birthDate: new Date(), nannyId: "111", parentId1: "11111", parentId2:"2222" },
-        //{ id: "324", name: "אבי", birthDate: new Date(), nannyId: "111", parentId1: "33333", parentId2: "44444" },
-    ];
-    selectedBaby: Baby;
+    private babyActs: BabyActs[] 
+    
+    constructor(private logService: AddActivityService) {
 
+    }
+
+    ngOnInit() {
+        this.logService.getBabiesActivities().subscribe(babies => {
+           this.babyActs = babies
+        });
+
+    }
     eat(id: string) {
         console.log(id);
     }
+    enabledActivities() {
+
+    }
+
 
 }
