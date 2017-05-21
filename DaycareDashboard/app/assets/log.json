@@ -1,8 +1,8 @@
-﻿[
+﻿
   {
     "babyName": "Avi Kaplan",
     "babyId": "123456789",
-    "date":  "27/05/2017",
+    "date": "27/05/2017",
     "activities": [
       {
         "actTime": "07:15",
@@ -26,4 +26,3 @@
       }
     ]
   }
-]

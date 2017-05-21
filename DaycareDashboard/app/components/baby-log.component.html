@@ -1,11 +1,11 @@
 ﻿<div style="direction:rtl">
-    <div class="log-header">
-        <h3>
+    <div class="log-header" *ngIf ="babyLog">
+        <h3 >
             {{babyLog.babyName}}'s activities on {{babyLog.date}}
         </h3>
         <div class="log-table">
             <ul>
-                <li *ngFor="let act of activities">
+                <li *ngFor="let act of babyLog.actsLog">
                     <span>
                     </span>
                     <span>

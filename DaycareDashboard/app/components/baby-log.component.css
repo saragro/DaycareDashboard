@@ -1,3 +1,42 @@
-﻿.log-wrapper {
-    direction: rtl;
+﻿ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    width: 350px;
+    height: 150px;
+}
+
+.log-row {
+    width: 230px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #e4e6e8;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: none;
+}
+
+.activity {
+    font-weight: bold;
+    font-size: large;
+    margin: 10px;
+}
+
+.time {
+    font-size: x-large;
+    padding: 10px;
+    padding-top: 18px;
+    height: 80px;
+    float: right;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.remark {
+    float: right;
+    padding:10px;
+    color: gray;
 }

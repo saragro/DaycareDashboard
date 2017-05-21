@@ -8,14 +8,15 @@ import { BabyLog, ActivityType, ActivityLogService } from '../index';
     styleUrls: ['./app/components/baby-log.component.css'],
 })
 export class BabyLogComponent implements OnInit {
-    private babyLog: BabyLog[];
+    private babyLog: BabyLog;
 
     constructor(private logService: ActivityLogService) {
-
+      
     }
 
     ngOnInit() {
         this.logService.getActivityLogsForBaby().subscribe(acts => {
+            console.log(acts);
             this.babyLog = acts
         });
    
