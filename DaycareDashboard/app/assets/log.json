@@ -3,26 +3,26 @@
     "babyName": "Avi Kaplan",
     "babyId": "123456789",
     "date": "27/05/2017",
-    "activities": [
+    "actsLog": [
       {
-        "actTime": "07:15",
-        "actType": "fed",
-        "remarks": "Formula 120ml"
+        "time": "07:15",
+        "type": "fed",
+        "remark": "Formula 120ml"
       },
       {
-        "actTime": "08:00",
-        "actType": "changed",
-        "remarks": "no. 1 only"
+        "time": "08:00",
+        "type": "changed",
+        "remark": "no. 1 only"
       },
       {
-        "actTime": "10:10",
-        "actType": "slept",
-        "remarks": "seemed to have a bad dream"
+        "time": "10:10",
+        "type": "slept",
+        "remark": "seemed to have a bad dream"
       },
       {
-        "actTime": "13:00",
-        "actType": "woke up",
-        "remarks": "with a smile on his face"
+        "time": "13:00",
+        "type": "woke up",
+        "remark": "with a smile on his face"
       }
     ]
   }

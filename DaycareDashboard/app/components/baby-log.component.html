@@ -1,4 +1,4 @@
-﻿<div style="direction:rtl">
+﻿<div>
     <div class="log-header" *ngIf ="babyLog">
         <h3 >
             {{babyLog.babyName}}'s activities on {{babyLog.date}}
@@ -6,14 +6,17 @@
         <div class="log-table">
             <ul>
                 <li *ngFor="let act of babyLog.actsLog">
-                    <span>
-                    </span>
-                    <span>
-                        אכלתי
-                    </span>
-                    <span>
-                        מטרנה 120 מ"ל
-                    </span>
+                    <div class="log-row">
+                        <span class="time">
+                            {{act.time}}
+                        </span>
+                        <span class="activity">
+                            {{act.type}}
+                        </span>
+                        <span class="remark">
+                            {{act.remark}}
+                        </span>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -21,4 +24,3 @@
 </div>
 
 
-<add-activity></add-activity>
