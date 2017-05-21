@@ -1,6 +1,5 @@
-﻿import { Component } from '@angular/core';
-import { ActivityLog } from '../models/activity-log.model';
-import { ActivityType } from '../models/activity-type.enum';
+﻿import { Component, OnInit } from '@angular/core';
+import { BabyLog, ActivityType, ActivityLogService } from '../index';
 
 
 @Component({
@@ -8,12 +7,19 @@ import { ActivityType } from '../models/activity-type.enum';
     templateUrl: './app/components/baby-log.component.html',
     styleUrls: ['./app/components/baby-log.component.css'],
 })
-export class BabyLogComponent {
-    activities: ActivityLog[] = [
-        { type: ActivityType.EAT, babyId: "1", babyName: "יוסי", remark: "מטרנה", date: new Date(), time:"07:30" },
-        { type: ActivityType.EAT, babyId: "1", babyName: "יוסי", remark: "מטרנה", date: new Date(), time:"07:30" },
-        { type: ActivityType.EAT, babyId: "1", babyName: "יוסי", remark: "מטרנה", date: new Date(), time:"07:30" },
-        { type: ActivityType.EAT, babyId: "1", babyName: "יוסי", remark: "מטרנה", date: new Date(), time: "07:30" }
-    ];
+export class BabyLogComponent implements OnInit {
+    private babyLog: BabyLog[];
+
+    constructor(private logService: ActivityLogService) {
+
+    }
+
+    ngOnInit() {
+        this.logService.getActivityLogsForBaby().subscribe(acts => {
+            this.babyLog = acts
+        });
+   
+    }
+
 
 }
