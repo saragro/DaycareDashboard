@@ -1,0 +1,33 @@
+﻿[
+  {
+    "babyId": "123456789",
+    "babyName": "Avi Kaplan",
+
+    "avialbleActivities": [
+      {
+        "actType": 1,
+        "isEnabled": "true"
+      },
+      {
+        "actType": 2,
+        "isEnabled": "true"
+      },
+      {
+        "actType": 3,
+        "isEnabled": "false"
+      },
+      {
+        "actType": 4,
+        "isEnabled": "true"
+      },
+      {
+        "actType": 5,
+        "isEnabled": "false"
+      },
+      {
+        "actType": 6,
+        "isEnabled": "true"
+      }
+    ]
+  }
+]

@@ -2,5 +2,7 @@
     EAT = 1,
     SLEEP,
     WAKE_UP,
-    CHANGED
+    CHANGED,
+    ARRIVE,
+    GO_HOME
 }
