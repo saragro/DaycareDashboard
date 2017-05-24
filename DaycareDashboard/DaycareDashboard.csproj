@@ -68,6 +68,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\components\add-activity.component.css" />
     <Content Include="app\components\add-activity.component.html" />
     <Content Include="app\components\baby-log.component.css" />
     <Content Include="packages.config" />

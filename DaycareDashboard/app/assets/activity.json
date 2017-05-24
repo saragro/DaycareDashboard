@@ -5,19 +5,27 @@
 
     "avialbleActivities": [
       {
-        "actType": "EAT",
+        "actType": 1,
         "isEnabled": "true"
       },
       {
-        "actType": "SLEEP",
+        "actType": 2,
         "isEnabled": "true"
       },
       {
-        "actType": "WAKE_UP",
+        "actType": 3,
         "isEnabled": "false"
       },
       {
-        "actType": "CHANGED",
+        "actType": 4,
+        "isEnabled": "true"
+      },
+      {
+        "actType": 5,
+        "isEnabled": "false"
+      },
+      {
+        "actType": 6,
         "isEnabled": "true"
       }
     ]
