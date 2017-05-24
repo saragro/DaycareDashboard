@@ -1,13 +1,13 @@
 ﻿import { Component } from '@angular/core';
 import { ActivityLog } from '../models/activity-log.model';
-import { ActivityType } from '../models/activity-type.enum';
+import { ActivityType } from "../../shared/index";
 import { Baby } from '../models/baby.model';
 import { ButtonModule } from 'primeng/primeng';
 
 
 @Component({
     selector: 'add-activity',
-    templateUrl: './app/components/add-activity.component.html',
+    templateUrl: './app/activities/components/add-activity.component.html',
     //styleUrls: ['./app/components/add-activity.component.css'],
 })
 export class AddActivityComponent {

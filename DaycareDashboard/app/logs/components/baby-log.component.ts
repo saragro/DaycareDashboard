@@ -1,16 +1,16 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { BabyLog, ActivityType, ActivityLogService } from '../index';
+import { BabyLog, ActivityType, BabyLogService } from '../index';
 
 
 @Component({
     selector: 'baby-log',   
-    templateUrl: './app/components/baby-log.component.html',
-    styleUrls: ['./app/components/baby-log.component.css'],
+    templateUrl: './app/logs/components/baby-log.component.html',
+    styleUrls: ['./app/logs/components/baby-log.component.css'],
 })
 export class BabyLogComponent implements OnInit {
     private babyLog: BabyLog;
 
-    constructor(private logService: ActivityLogService) {
+    constructor(private logService: BabyLogService) {
       
     }
 

@@ -1,7 +1,9 @@
 ﻿<div>
     <div class="log-header" *ngIf ="babyLog">
         <h3 >
-            {{babyLog.babyName}}'s activities on {{babyLog.date}}
+            {{babyLog.babyName}}'s activities on 
+            <!--<input type="date" [value]="babyLog.date">-->
+            <p-calendar dateFormat="dd/mm/yy" [(ngModel)]="babyLog.date" [inputStyleClass]="datepicker"></p-calendar>
         </h3>
         <div class="log-table">
             <ul>

@@ -1,4 +1,4 @@
-﻿import { ActivityType } from "./activity-type.enum";
+﻿import { ActivityType } from "../../shared/index";
 
 export interface ActivityLog {
     type: ActivityType;

@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import { BabyLog } from "../index"
 
 @Injectable()
-export class ActivityLogService {
+export class BabyLogService {
 
     private url = 'app/assets/log.json';
     private headers = new Headers({ 'Content-Type': 'application/json' })
