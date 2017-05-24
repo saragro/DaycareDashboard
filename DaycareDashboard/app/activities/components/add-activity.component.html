@@ -1,10 +1,10 @@
 ﻿<div>
     <ul>
-         <li *ngFor="let baby of babyActs">
+        <li *ngFor="let baby of babyActs">
             <div>
                 {{baby.babyName}}
                 <ul>
-                    <li  *ngFor="let act of baby.avialbleActivities">
+                    <li *ngFor="let act of baby.avialbleActivities">
                         <!--<button type="button"  [disabled]="act.isEnabled" (click)="act.isEnabled && goHome(baby.babyId)">{{act.actType}}</button>-->
                         <button [ngClass]="{disabled : act.isEnabled}" (click)="act.isEnabled && goHome(baby.babyId, this)">{{act.actType}}</button>
                     </li>

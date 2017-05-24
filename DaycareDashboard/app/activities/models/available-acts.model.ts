@@ -1,4 +1,4 @@
-﻿import { ActivityType } from "./activity-type.enum";
+﻿import { ActivityType } from "../index";
 
 export interface AvailableActivity {
     actType: ActivityType;

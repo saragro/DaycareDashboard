@@ -1,12 +1,13 @@
 ﻿import { Component, OnInit } from '@angular/core';
 import { BabyActs } from '../models/baby-acts.model';
 import { ButtonModule } from 'primeng/primeng';
-import { BabyLog, ActivityType, AddActivityService } from '../index';
+import { AddActivityService } from '../index';
+import { ActivityType } from "../index";
+
 
 @Component({
     selector: 'add-activity',
-    templateUrl: './app/components/add-activity.component.html',
-    //styleUrls: ['./app/components/add-activity.component.css'],
+    templateUrl: './app/activities/components/add-activity.component.html',
 })
 export class AddActivityComponent {
     private babyActs: BabyActs[]
@@ -59,4 +60,4 @@ export class AddActivityComponent {
 
 
 
-    }
+}

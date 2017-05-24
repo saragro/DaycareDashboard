@@ -68,9 +68,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\components\add-activity.component.css" />
-    <Content Include="app\components\add-activity.component.html" />
-    <Content Include="app\components\baby-log.component.css" />
+    <Content Include="app\activities\components\add-activity.component.css" />
+    <Content Include="app\activities\components\add-activity.component.html" />
+    <Content Include="app\logs\components\baby-log.component.css" />
+    <Content Include="app\logs\components\baby-log.component.html" />
+    <Content Include="app\root\components\root.component.html" />
     <Content Include="packages.config" />
     <Content Include="app\assets\log.json" />
     <Content Include="app\assets\activity.json" />
@@ -83,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
-    <Content Include="app\components\baby-log.component.html" />
     <Content Include="index.html" />
     <Content Include="Web.config" />
     <Content Include="tsconfig.json" />
@@ -92,21 +93,26 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app\components\add-activity.component.ts" />
-    <TypeScriptCompile Include="app\components\baby-log.component.ts" />
-    <TypeScriptCompile Include="app\index.ts" />
+    <TypeScriptCompile Include="app\activities\components\add-activity.component.ts" />
+    <TypeScriptCompile Include="app\activities\index.ts" />
+    <TypeScriptCompile Include="app\activities\models\baby-acts.model.ts" />
+    <TypeScriptCompile Include="app\activities\models\baby.model.ts" />
+    <TypeScriptCompile Include="app\activities\models\nanny.model.ts" />
+    <TypeScriptCompile Include="app\activities\modules\activity.module.ts" />
+    <TypeScriptCompile Include="app\logs\components\baby-log.component.ts" />
+    <TypeScriptCompile Include="app\logs\index.ts" />
+    <TypeScriptCompile Include="app\logs\models\activity.model.ts" />
+    <TypeScriptCompile Include="app\logs\models\baby-log.model.ts" />
+    <TypeScriptCompile Include="app\logs\modules\baby-log.module.ts" />
+    <TypeScriptCompile Include="app\logs\services\baby-log.service.ts" />
     <TypeScriptCompile Include="app\main.ts" />
-    <TypeScriptCompile Include="app\models\activity-log.model.ts" />
-    <TypeScriptCompile Include="app\models\activity-type.enum.ts" />
-    <TypeScriptCompile Include="app\models\activity.model.ts" />
-    <TypeScriptCompile Include="app\models\available-acts.model.ts" />
-    <TypeScriptCompile Include="app\models\baby-log.model.ts" />
-    <TypeScriptCompile Include="app\models\baby.model.ts" />
-    <TypeScriptCompile Include="app\models\baby-acts.model.ts" />
-    <TypeScriptCompile Include="app\models\nanny.model.ts" />
-    <TypeScriptCompile Include="app\modules\app.modules.ts" />
-    <TypeScriptCompile Include="app\services\activity-log.service.ts" />
-    <TypeScriptCompile Include="app\services\add-activity.service.ts" />
+    <TypeScriptCompile Include="app\activities\models\available-acts.model.ts" />
+    <TypeScriptCompile Include="app\root\components\root.component.ts" />
+    <TypeScriptCompile Include="app\root\index.ts" />
+    <TypeScriptCompile Include="app\root\modules\root.module.ts" />
+    <TypeScriptCompile Include="app\activities\services\add-activity.service.ts" />
+    <TypeScriptCompile Include="app\shared\index.ts" />
+    <TypeScriptCompile Include="app\shared\models\activity-type.enum.ts" />
     <TypeScriptCompile Include="app\systemjsconfig.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +135,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62037</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62000/</IISUrl>
+          <IISUrl>http://localhost:62011/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

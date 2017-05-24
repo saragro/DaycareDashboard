@@ -1,14 +1,13 @@
 ﻿import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { AddActivityComponent } from "../index";
+import { AddActivityComponent, AddActivityService } from "../index";
 import { HttpModule } from "@angular/http";
-import { CalendarModule } from 'primeng/primeng';
-
-
 
 @NgModule({
-    imports: [CommonModule, HttpModule, CalendarModule],
+    imports: [CommonModule, HttpModule],
     declarations: [AddActivityComponent],
+    exports: [AddActivityComponent],
+    providers: [AddActivityService]
 })
 export class ActivityModule {
 }
