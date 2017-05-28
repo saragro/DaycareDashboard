@@ -113,6 +113,7 @@
     <TypeScriptCompile Include="app\activities\services\add-activity.service.ts" />
     <TypeScriptCompile Include="app\shared\index.ts" />
     <TypeScriptCompile Include="app\shared\models\activity-type.enum.ts" />
+    <TypeScriptCompile Include="app\shared\pipes\activity.pipe.ts" />
     <TypeScriptCompile Include="app\systemjsconfig.ts" />
   </ItemGroup>
   <ItemGroup>

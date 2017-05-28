@@ -3,7 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { BabyActs } from "../index"
+import { BabyActs, ActivityType, AvailableActivity } from "../index"
 
 @Injectable()
 export class AddActivityService {
@@ -34,4 +34,33 @@ export class AddActivityService {
 
     }
 
+    disabledEnabledActs (isSleep: boolean, isArrive: boolean, avialbleActivities: AvailableActivity[]) {
+        for (let act of avialbleActivities) {
+            switch (act.actType) {
+                case ActivityType.ARRIVE:
+                    act.isEnabled = isArrive;
+                    break;
+                case ActivityType.GO_HOME:
+                    act.isEnabled = !isArrive;
+                    break;
+                case ActivityType.EAT:
+                    act.isEnabled = !isArrive && isSleep;
+                    break;
+                case ActivityType.SLEEP:
+                    act.isEnabled = isSleep;
+                    break;
+                case ActivityType.WAKE_UP:
+                    act.isEnabled = !isSleep && !isArrive;
+                    break;
+                case ActivityType.CHANGED:
+                    act.isEnabled = !isArrive && isSleep;
+                    break;
+            }
+        }
+
+    }
+
+    addActivityToBabyLog(baby: BabyActs, actId: number) {
+        console.log(baby.babyName + " - " + baby.babyId, ActivityType[actId], new Date);
+    }
 }

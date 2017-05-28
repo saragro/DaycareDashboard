@@ -6,27 +6,27 @@
     "avialbleActivities": [
       {
         "actType": 1,
-        "isEnabled": "true"
+        "isEnabled": false
       },
       {
         "actType": 2,
-        "isEnabled": "true"
+        "isEnabled": false
       },
       {
         "actType": 3,
-        "isEnabled": "false"
+        "isEnabled": false
       },
       {
         "actType": 4,
-        "isEnabled": "true"
+        "isEnabled": false
       },
       {
         "actType": 5,
-        "isEnabled": "false"
+        "isEnabled": true
       },
       {
         "actType": 6,
-        "isEnabled": "true"
+        "isEnabled": false
       }
     ]
   }

@@ -3,18 +3,9 @@
         <li *ngFor="let baby of babyActs">
             <div>
                 {{baby.babyName}}
-                <ul>
-                    <li *ngFor="let act of baby.avialbleActivities">
-                        <!--<button type="button"  [disabled]="act.isEnabled" (click)="act.isEnabled && goHome(baby.babyId)">{{act.actType}}</button>-->
-                        <button [ngClass]="{disabled : act.isEnabled}" (click)="act.isEnabled && goHome(baby.babyId, this)">{{act.actType}}</button>
-                    </li>
-                </ul>
-                <!--<button type="button" (click)="eat(baby.babyId)" disabled="" >Eat</button>
-                <button type="button" label="Click">Sleep</button>
-                <button type="button" label="Click">Wake Up</button>
-                <button type="button" label="Click">Change</button>
-                <button type="button" label="Click">Arrive</button>
-                <button type="button" (click)="goHome(baby.babyId)">Go Home</button>-->
+                <span  *ngFor="let act of baby.avialbleActivities">                
+                    <button [ngClass]="{'disabled' : !act.isEnabled}" (click)="addActivity(baby.babyId,act.actType)">{{act.actType | actPipe}}</button>
+                  </span>
             </div>
         </li>
     </ul>
