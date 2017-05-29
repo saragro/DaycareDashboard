@@ -1,8 +1,7 @@
-﻿import { Activity } from "../index";
+﻿import { Activity, Baby } from "../index";
 
 export interface BabyLog {
-    babyId: string;
-    babyName: string;
+    baby: Baby;
     date: Date;
     actsLog: Activity[];
 }

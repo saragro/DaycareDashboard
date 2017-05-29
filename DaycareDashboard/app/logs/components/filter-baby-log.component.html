@@ -1,0 +1,9 @@
+﻿<div class="log-header" *ngIf="babyLog">
+    <h3>
+        <select [(ngModel)]="babyLog.baby">
+            <option *ngFor="let baby of babies" [ngValue]="baby">{{baby.name}}</option>
+        </select>'s activities on
+        <p-calendar dateFormat="dd/mm/yy" [(ngModel)]="babyLog.date" [inputStyleClass]="datepicker"></p-calendar>
+    </h3>
+    <baby-log [activities]="babyLog.actsLog"></baby-log>
+</div>

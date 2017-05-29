@@ -1,28 +1,20 @@
-﻿<div>
-    <div class="log-header" *ngIf ="babyLog">
-        <h3 >
-            {{babyLog.babyName}}'s activities on 
-            <!--<input type="date" [value]="babyLog.date">-->
-            <p-calendar dateFormat="dd/mm/yy" [(ngModel)]="babyLog.date" [inputStyleClass]="datepicker"></p-calendar>
-        </h3>
-        <div class="log-table">
-            <ul>
-                <li *ngFor="let act of babyLog.actsLog">
-                    <div class="log-row">
-                        <span class="time">
-                            {{act.time}}
-                        </span>
-                        <span class="activity">
-                            {{act.type}}
-                        </span>
-                        <span class="remark">
-                            {{act.remark}}
-                        </span>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+﻿<div class="log-table">
+    <ul>
+        <li *ngFor="let act of activities">
+            <div class="log-row">
+                <span class="time">
+                    {{act.time}}
+                </span>
+                <span class="activity">
+                    {{act.type}}
+                </span>
+                <span class="remark">
+                    {{act.remark}}
+                </span>
+            </div>
+        </li>
+    </ul>
 </div>
+
 
 

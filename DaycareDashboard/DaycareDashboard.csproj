@@ -89,10 +89,14 @@
     <Content Include="app\activities\components\add-activity.component.html" />
     <Content Include="app\logs\components\baby-log.component.css" />
     <Content Include="app\logs\components\baby-log.component.html" />
+    <Content Include="app\logs\components\filter-baby-log.component.css" />
+    <Content Include="app\logs\components\filter-baby-log.component.html" />
+    <TypeScriptCompile Include="app\logs\models\baby.model.ts" />
     <Content Include="app\root\components\root.component.html" />
     <Content Include="packages.config" />
     <Content Include="app\assets\log.json" />
     <Content Include="app\assets\activity.json" />
+    <Content Include="app\assets\babyList.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -120,10 +124,10 @@
     <TypeScriptCompile Include="app\activities\components\add-activity.component.ts" />
     <TypeScriptCompile Include="app\activities\index.ts" />
     <TypeScriptCompile Include="app\activities\models\baby-acts.model.ts" />
-    <TypeScriptCompile Include="app\activities\models\baby.model.ts" />
     <TypeScriptCompile Include="app\activities\models\nanny.model.ts" />
     <TypeScriptCompile Include="app\activities\modules\activity.module.ts" />
     <TypeScriptCompile Include="app\logs\components\baby-log.component.ts" />
+    <TypeScriptCompile Include="app\logs\components\filter-baby-log.component.ts" />
     <TypeScriptCompile Include="app\logs\index.ts" />
     <TypeScriptCompile Include="app\logs\models\activity.model.ts" />
     <TypeScriptCompile Include="app\logs\models\baby-log.model.ts" />
@@ -160,7 +164,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62037</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:62011/</IISUrl>
+          <IISUrl>http://localhost:6203/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
