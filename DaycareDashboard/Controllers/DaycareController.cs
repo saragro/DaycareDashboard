@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DaycareDashboard.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -10,10 +11,16 @@ namespace DaycareDashboard.Controllers
     [RoutePrefix("api/daycare")]
     public class DaycareController : ApiController
     {
-        // GET api/<controller>
+        [Route("GetBabyActivitiesLog")]
         public IEnumerable<string> GetBabyActivitiesLog()
         {
             return null;
+        }
+
+        [Route("GetBabies")]
+        public List<Baby> GetBabies()
+        {
+            return DB.Babies;
         }
 
         // GET api/<controller>/5

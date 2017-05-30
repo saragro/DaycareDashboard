@@ -93,6 +93,7 @@
     <Content Include="app\logs\components\filter-baby-log.component.html" />
     <TypeScriptCompile Include="app\logs\models\baby.model.ts" />
     <Content Include="app\root\components\root.component.html" />
+    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="app\assets\log.json" />
     <Content Include="app\assets\activity.json" />
@@ -113,7 +114,11 @@
     <Content Include="tsconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStart\WebApiConfig.cs" />
     <Compile Include="Controllers\DaycareController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Models\Activity.cs" />
     <Compile Include="Models\ActivityType.cs" />
     <Compile Include="Models\Baby.cs" />
