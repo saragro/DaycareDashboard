@@ -11,6 +11,21 @@ namespace DaycareDashboard.Controllers
     [RoutePrefix("api/daycare")]
     public class DaycareController : ApiController
     {
+        [HttpPost]
+        [Route("LoginParent")]
+        public Boolean LoginParent(string parentId ,string babyId, string year)
+        {
+            try
+            {
+                var baby = DB.Babies.Find(x => x.ID.Equals(babyId.Trim()) && (x.ParentID1.Equals(parentId.Trim()) || x.ParentID2.Equals(parentId.Trim())) && x.Year.Equals(year.Trim()));
+                return baby != null;
+            } catch (Exception e)
+            {
+                //Console.Error("error authenticating parent " + e);
+                return false;
+            }
+        }
+
         [Route("GetBabyActivitiesLog")]
         public IEnumerable<string> GetBabyActivitiesLog()
         {

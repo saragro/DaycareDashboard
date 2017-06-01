@@ -87,14 +87,18 @@
   <ItemGroup>
     <Content Include="app\activities\components\add-activity.component.css" />
     <Content Include="app\activities\components\add-activity.component.html" />
-    <Content Include="app\login\components\login.component.css" />
-    <Content Include="app\login\components\login.component.html" />
+    <Content Include="app\login\components\login-parent.component.css" />
+    <Content Include="app\login\components\login-parent.component.html" />
     <Content Include="app\logs\components\baby-log.component.css" />
     <Content Include="app\logs\components\baby-log.component.html" />
     <Content Include="app\logs\components\filter-baby-log.component.css" />
     <Content Include="app\logs\components\filter-baby-log.component.html" />
-    <TypeScriptCompile Include="app\login\components\login.component.ts" />
-    <TypeScriptCompile Include="app\login\models\user.model.ts" />
+    <TypeScriptCompile Include="app\login\components\login-parent.component.ts" />
+    <TypeScriptCompile Include="app\login\index.ts" />
+    <TypeScriptCompile Include="app\login\models\parent-credentials.model.ts" />
+    <TypeScriptCompile Include="app\login\modules\login.module.ts" />
+    <TypeScriptCompile Include="app\login\login.routing.ts" />
+    <TypeScriptCompile Include="app\login\services\login.service.ts" />
     <TypeScriptCompile Include="app\logs\models\baby.model.ts" />
     <Content Include="app\root\components\root.component.html" />
     <Content Include="Global.asax" />
@@ -148,6 +152,7 @@
     <TypeScriptCompile Include="app\root\index.ts" />
     <TypeScriptCompile Include="app\root\modules\root.module.ts" />
     <TypeScriptCompile Include="app\activities\services\add-activity.service.ts" />
+    <TypeScriptCompile Include="app\root\root.routing.ts" />
     <TypeScriptCompile Include="app\shared\index.ts" />
     <TypeScriptCompile Include="app\shared\models\activity-type.enum.ts" />
     <TypeScriptCompile Include="app\shared\modules\shared.module.ts" />
