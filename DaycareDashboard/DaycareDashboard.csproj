@@ -87,10 +87,14 @@
   <ItemGroup>
     <Content Include="app\activities\components\add-activity.component.css" />
     <Content Include="app\activities\components\add-activity.component.html" />
+    <Content Include="app\login\components\login.component.css" />
+    <Content Include="app\login\components\login.component.html" />
     <Content Include="app\logs\components\baby-log.component.css" />
     <Content Include="app\logs\components\baby-log.component.html" />
     <Content Include="app\logs\components\filter-baby-log.component.css" />
     <Content Include="app\logs\components\filter-baby-log.component.html" />
+    <TypeScriptCompile Include="app\login\components\login.component.ts" />
+    <TypeScriptCompile Include="app\login\models\user.model.ts" />
     <TypeScriptCompile Include="app\logs\models\baby.model.ts" />
     <Content Include="app\root\components\root.component.html" />
     <Content Include="Global.asax" />
@@ -146,6 +150,7 @@
     <TypeScriptCompile Include="app\activities\services\add-activity.service.ts" />
     <TypeScriptCompile Include="app\shared\index.ts" />
     <TypeScriptCompile Include="app\shared\models\activity-type.enum.ts" />
+    <TypeScriptCompile Include="app\shared\modules\shared.module.ts" />
     <TypeScriptCompile Include="app\shared\pipes\activity.pipe.ts" />
     <TypeScriptCompile Include="app\systemjsconfig.ts" />
   </ItemGroup>

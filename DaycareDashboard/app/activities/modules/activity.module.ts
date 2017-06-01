@@ -2,11 +2,11 @@
 import { CommonModule } from "@angular/common";
 import { AddActivityComponent, AddActivityService } from "../index";
 import { HttpModule } from "@angular/http";
-import { RootModule } from "../../root/modules/root.module";
+import { SharedModule } from '../../shared/index';
 
 
 @NgModule({
-    imports: [CommonModule, HttpModule, RootModule],
+    imports: [CommonModule, HttpModule, SharedModule],
     declarations: [AddActivityComponent],
     exports: [AddActivityComponent],
     providers: [AddActivityService]
