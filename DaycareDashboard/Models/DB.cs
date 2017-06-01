@@ -14,17 +14,26 @@ namespace DaycareDashboard.Models
         {
             Babies = new List<Baby>
             {
-                new Baby {ID= "123456789", Name="Avi Kaplan", BirthDate= new DateTime(2016,12,03),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny"},
-                new Baby {ID= "652347821", Name="Adi Gross ", BirthDate= new DateTime(2017,01,14),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny"},
-                new Baby {ID= "855742135", Name="Panny Pandy", BirthDate= new DateTime(2016,11,29),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny"},
-            };
+                new Baby {Id= "1", Name="Talia Birenzweig", BirthDate= new DateTime(2016,12,03),ParentId1="yochi", ParentId2 = "ruvi",NannyId="nanny",
+                    ActsLog = new List<Activity>
+                    {
+                         new Activity {Id="1", Type=ActivityType.ARRIVE,CreateDate=new DateTime(2017,05,28,07,30,45) , Time="07:30"},
+                         new Activity {Id="1", Type=ActivityType.EAT,CreateDate=new DateTime(2017,05,28,08,30,45),Time ="08:30", Remark="Formula 120ml" }
+                    }
+                },
+                new Baby {Id= "2", Name="Ari Rozenkrantz ", BirthDate= new DateTime(2017,01,14),ParentId1="rivi", ParentId2 = "moti",NannyId="nanny",
+                    ActsLog = new List<Activity>
+                    {
+                        new Activity {Id="2", Type=ActivityType.ARRIVE,CreateDate=new DateTime(2017,05,28,07,33,15), Time ="07:33" },
+                    }
+                },
+                new Baby {Id= "3", Name="Itzik  Rozenkrantz", BirthDate= new DateTime(2016,11,29),ParentId1="rivi", ParentId2 = "moti",NannyId="nanny"
+                    ,ActsLog=new List<Activity>
+                    {
+                        new Activity {Id="3", Type=ActivityType.EAT,CreateDate=new DateTime(2017,05,28,08,52,05), Time = "08:52" },
+                    }
 
-            Activities = new List<Activity>
-            {
-                new Activity {BabyID="123456789", Type=ActivityType.ARRIVE,Time=new DateTime(2017,05,28,07,30,45) },
-                new Activity {BabyID="652347821", Type=ActivityType.ARRIVE,Time=new DateTime(2017,05,28,07,33,15) },
-                new Activity {BabyID="123456789", Type=ActivityType.EAT,Time=new DateTime(2017,05,28,08,30,45) },
-                new Activity {BabyID="855742135", Type=ActivityType.EAT,Time=new DateTime(2017,05,28,08,52,05) },
+                },
             };
         }
                 

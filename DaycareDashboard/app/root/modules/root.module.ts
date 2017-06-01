@@ -3,11 +3,12 @@ import { HttpModule } from "@angular/http";
 import { BrowserModule } from "@angular/platform-browser";
 import { ActivityModule } from '../../activities/index';
 import { BabyLogModule } from '../../logs/index';
-import { RootComponent } from '../index';
+import { RootComponent, ActivityPipe } from '../index';
 
 @NgModule({
     imports: [BrowserModule, HttpModule, ActivityModule, BabyLogModule],
-    declarations: [RootComponent],
+    declarations: [RootComponent,ActivityPipe],
+	exports:[ActivityPipe],
     bootstrap: [RootComponent],
 })
 export class RootModule {

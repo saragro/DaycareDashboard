@@ -1,4 +1,5 @@
-﻿export * from './models/baby-log.model';
+﻿
+export * from './models/baby-log.model';
 export * from './models/activity.model';
 export * from './models/baby.model';
 export * from './services/baby-log.service';

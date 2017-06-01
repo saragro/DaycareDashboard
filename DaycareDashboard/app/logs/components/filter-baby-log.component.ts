@@ -22,7 +22,7 @@ export class FilterBabyLogComponent implements OnInit, OnChanges{
         this.logService.getActivityLogsForBaby().subscribe(babyLog =>
             this.babyLog = babyLog
         );
-
+		console.log(this.babyLog);
         this.logService.getBabyList().subscribe(babies =>  this.babies = babies );
     }
 

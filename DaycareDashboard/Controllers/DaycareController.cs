@@ -11,22 +11,22 @@ namespace DaycareDashboard.Controllers
     [RoutePrefix("api/daycare")]
     public class DaycareController : ApiController
     {
-        [Route("GetBabyActivitiesLog")]
-        public IEnumerable<string> GetBabyActivitiesLog()
+        [Route("getBabyActivitiesLog")]
+        public Baby GetBabyActivitiesLog()
         {
-            return null;
+            return DB.Babies.First();
         }
 
-        [Route("GetBabies")]
+        [Route("getBabies")]
         public List<Baby> GetBabies()
         {
             return DB.Babies;
         }
 
-        // GET api/<controller>/5
-        public string Get(int id)
+        [Route("getBabyById")]
+        public Baby GetBabyById(string id)
         {
-            return "value";
+            return DB.Babies.FirstOrDefault(b => b.Id == id);
         }
 
         // POST api/<controller>

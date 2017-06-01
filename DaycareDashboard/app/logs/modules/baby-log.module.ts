@@ -1,6 +1,6 @@
 ﻿import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { BabyLogComponent, FilterBabyLogComponent, BabyLogService } from "../index";
+import { BabyLogComponent, FilterBabyLogComponent, BabyLogService} from "../index";
 import { HttpModule } from "@angular/http";
 import { CalendarModule } from 'primeng/primeng';
 import { FormsModule } from '@angular/forms';
