@@ -26,6 +26,13 @@ namespace DaycareDashboard.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("LoginNanny")]
+        public Boolean LoginNanny(string userName, string pwd)
+        {
+            return true;
+        }
+
         [Route("GetBabyActivitiesLog")]
         public IEnumerable<string> GetBabyActivitiesLog()
         {

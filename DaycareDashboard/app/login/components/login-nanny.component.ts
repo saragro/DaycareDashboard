@@ -1,30 +1,30 @@
 ﻿import { Component, OnInit, Input } from '@angular/core';
-import { ParentCredentials, LoginService } from '../index';
+import { NannyCredentials, LoginService } from '../index';
 import { Router } from "@angular/router";
 
 
 @Component({
-    selector: 'login-parent',
-    templateUrl: './app/login/components/login-parent.component.html',
-    styleUrls: ['./app/login/components/login-parent.component.css'],
+    selector: 'login-nanny',
+    templateUrl: './app/login/components/login-nanny.component.html',
+    styleUrls: ['./app/login/components/login-nanny.component.css'],
 })
-export class LoginParentComponent implements OnInit{
+export class LoginNannyComponent implements OnInit{
 
-    creds: ParentCredentials;
+    creds: NannyCredentials;
 
     constructor(private loginService: LoginService, private router: Router) {
 
     }
 
     ngOnInit() {
-        this.creds = new ParentCredentials();
+        this.creds = new NannyCredentials();
     }
 
     doLogin() {
-        this.loginService.loginParent(this.creds).subscribe(
+        this.loginService.loginNanny(this.creds).subscribe(
             (isAuthorized) => {
                 if (isAuthorized) {
-                    sessionStorage.setItem('userRole', 'parent');
+                    sessionStorage.setItem('userRole', 'nanny');
                     this.router.navigate(['log']);
                 } else {
                     //TODO show error message

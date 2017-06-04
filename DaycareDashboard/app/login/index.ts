@@ -1,5 +1,8 @@
 ﻿export * from './services/login.service';
-export { ParentCredentials } from './models/parent-credentials.model';
-export { LoginParentComponent } from './components/login-parent.component';
+export * from './models/parent-credentials.model';
+export * from './models/nanny-credentials.model';
+export * from './components/login-parent.component';
+export * from './components/login-nanny.component';
+export * from './components/login-main.component';
 export * from './login.routing';
-export { LoginModule } from './modules/login.module';
+export * from './modules/login.module';

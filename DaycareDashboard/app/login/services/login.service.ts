@@ -3,7 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-import { ParentCredentials } from "../index"
+import { ParentCredentials, NannyCredentials } from "../index"
 
 @Injectable()
 export class LoginService {
@@ -20,6 +20,13 @@ export class LoginService {
                     &babyId=${creds.babyId}&year=${creds.year}`;
         return this.http.post(url, null).map(this.extractData)
             .catch(this.handleError);       
+    }
+
+    loginNanny(creds: NannyCredentials): Observable<boolean> {
+        var url = `/api/daycare/LoginNanny/?userName=${creds.userName}
+                    &pwd=${creds.password}`;
+        return this.http.post(url, null).map(this.extractData)
+            .catch(this.handleError);
     }
 
     private extractData(response: Response): any {

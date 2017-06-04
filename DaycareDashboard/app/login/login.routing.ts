@@ -1,6 +1,6 @@
 ﻿import { Routes } from "@angular/router";
-import { LoginParentComponent } from "./index";
+import { LoginParentComponent, LoginNannyComponent, LoginMainComponent } from "./index";
 
 export let routes: Routes = [
-    { path: 'login', component: LoginParentComponent, pathMatch: 'full' },
+    { path: 'login', component: LoginMainComponent, pathMatch: 'full' },
 ];

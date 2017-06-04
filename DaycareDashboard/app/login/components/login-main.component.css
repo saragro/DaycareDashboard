@@ -1,0 +1,58 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #fff;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+.grad {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+    z-index: 1;
+}
+
+.header {
+    position: absolute;
+    top: calc(50% - 60px);
+    left: calc(50% - 350px);
+    z-index: 2;
+    text-align: center;
+}
+
+.header div {
+    float: left;
+    color: #fff;
+    font-family: 'Exo', sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+}
+
+.header div span {
+    color: #88319d !important;
+}
+
+.body {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -40px;
+    bottom: -40px;
+    width: auto;
+    height: auto;
+    background-image: url("app/assets/images/login-bg.png");
+    background-size: cover;
+    -webkit-filter: blur(8px);
+    z-index: 0;
+}
+
+.ui-selectbutton {
+    background: transparent;
+}

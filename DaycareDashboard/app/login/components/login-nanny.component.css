@@ -33,7 +33,7 @@
     font-size: 16px;
     font-weight: 400;
     padding: 8px;
-    margin-top: 10px;
+    margin: 3px;
 }
 
 .login input[type=button] {
@@ -51,13 +51,13 @@
     margin-top: 10px;
 }
 
-    .login input[type=button]:hover {
-        opacity: 0.8;
-    }
+.login input[type=button]:hover {
+    opacity: 0.8;
+}
 
-    .login input[type=button]:active {
-        opacity: 0.6;
-    }
+.login input[type=button]:active {
+    opacity: 0.6;
+}
 
 .login input[type=text]:focus {
     outline: none;

@@ -5,4 +5,6 @@ export * from './services/baby-log.service';
 export * from '../shared/models/activity-type.enum';
 export * from './components/baby-log.component';
 export * from './components/filter-baby-log.component';
+export * from '../ifs/guards/auth.guard';
+export * from './logs.routing';
 export * from './modules/baby-log.module';

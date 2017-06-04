@@ -1,0 +1,12 @@
+﻿<div class="body"></div>
+<div class="grad"></div>
+<div class="header">
+    <div>I am a <br />
+        <p-selectButton [options]="roles" [(ngModel)]="selectedRole" (onChange)="switchLogin()"></p-selectButton>
+    </div>
+</div>
+<br>
+<div class="login-div">
+    <login-nanny *ngIf="selectedRole=='Nanny'"></login-nanny>
+    <login-parent *ngIf="selectedRole=='Parent'"></login-parent>
+</div>
