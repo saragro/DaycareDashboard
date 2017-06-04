@@ -17,7 +17,7 @@ namespace DaycareDashboard.Controllers
         {
             try
             {
-                var baby = DB.Babies.Find(x => x.ID.Equals(babyId.Trim()) && (x.ParentID1.Equals(parentId.Trim()) || x.ParentID2.Equals(parentId.Trim())) && x.Year.Equals(year.Trim()));
+                var baby = DB.Babies.Find(x => x.Id.Equals(babyId.Trim()) && (x.ParentId1.Equals(parentId.Trim()) || x.ParentId2.Equals(parentId.Trim())) && x.Year.Equals(year.Trim()));
                 return baby != null;
             } catch (Exception e)
             {
@@ -32,9 +32,8 @@ namespace DaycareDashboard.Controllers
         {
             return true;
         }
-
-        [Route("GetBabyActivitiesLog")]
-        public IEnumerable<string> GetBabyActivitiesLog()
+        [Route("getBabyActivitiesLog")]
+        public Baby GetBabyActivitiesLog()
         {
             return DB.Babies.First();
         }
@@ -48,14 +47,14 @@ namespace DaycareDashboard.Controllers
                 baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
             }
 
-            return babies; 
+            return babies;
         }
 
         [Route("getBabyActivitiesLog1")]
         public Baby GetBabyById(string id)
         {
             var baby = DB.Babies.FirstOrDefault(b => b.Id == id);
-            if (baby!=null)
+            if (baby != null)
             {
                 baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
             }
@@ -72,7 +71,7 @@ namespace DaycareDashboard.Controllers
                     baby.ActsLog = new List<Activity>();
                 baby.ActsLog.Clear();
                 baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
-                var lastActivity =baby.ActsLog.OrderByDescending(b => b.CreateDate).FirstOrDefault();
+                var lastActivity = baby.ActsLog.OrderByDescending(b => b.CreateDate).FirstOrDefault();
                 baby.LastActivity = lastActivity != null ? lastActivity.Type : ActivityType.GO_HOME;
                 baby.AvialbleActivities = InitActivities();
             }
@@ -82,7 +81,7 @@ namespace DaycareDashboard.Controllers
 
         private List<AvailableActivity> InitActivities()
         {
-           return new List<AvailableActivity>
+            return new List<AvailableActivity>
             {
                 new AvailableActivity{ActType = ActivityType.ARRIVE},
                 new AvailableActivity{ActType = ActivityType.EAT},
@@ -115,9 +114,9 @@ namespace DaycareDashboard.Controllers
         }
 
         [Route("editActivityRemark")]
-        public bool EditActivityRemark(int actId , string remark)
+        public bool EditActivityRemark(int actId, string remark)
         {
-            var fromDb = DB.Activities.First(a=>a.ActId == actId);
+            var fromDb = DB.Activities.First(a => a.ActId == actId);
             if (fromDb == null)
                 return false;
 
