@@ -9,26 +9,38 @@ namespace DaycareDashboard.Models
     {
         public static List<Baby> Babies;
         public static List<Activity> Activities;
-
+        public static int ActivityID;
         static DB()
         {
+
             Babies = new List<Baby>
             {
-                new Baby {ID= "123456789", Name="Avi Kaplan", BirthDate= new DateTime(2016,12,03),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny",Year="2016"},
-                new Baby {ID= "652347821", Name="Adi Gross ", BirthDate= new DateTime(2017,01,14),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny",Year="2016"},
-                new Baby {ID= "855742135", Name="Panny Pandy", BirthDate= new DateTime(2016,11,29),ParentID1="parent1", ParentID2 = "parent2",NannyID="nanny",Year="2015"},
-            };
+                new Baby {Id= "1", Name="Talia Birenzweig", BirthDate= new DateTime(2016,12,03),ParentId1="yochi", ParentId2 = "ruvi",NannyId="nanny", Year="2016",
+                    ActsLog = new List<Activity>()
+                  
 
+                },
+               
+                new Baby {Id= "2", Name="Ari Rozenkrantz ", BirthDate= new DateTime(2017,01,14),ParentId1="rivi", ParentId2 = "moti",NannyId="nanny", Year="2016",
+                    ActsLog = new List<Activity>()
+                   
+                },
+                new Baby {Id= "3", Name="Itzik  Rozenkrantz", BirthDate= new DateTime(2016,11,29),ParentId1="rivi", ParentId2 = "moti",NannyId="nanny", Year="2016",
+                    ActsLog=new List<Activity>()
+                   
+
+                },
+            };
             Activities = new List<Activity>
             {
-                new Activity {BabyID="123456789", Type=ActivityType.ARRIVE,Time=new DateTime(2017,05,28,07,30,45) },
-                new Activity {BabyID="652347821", Type=ActivityType.ARRIVE,Time=new DateTime(2017,05,28,07,33,15) },
-                new Activity {BabyID="123456789", Type=ActivityType.EAT,Time=new DateTime(2017,05,28,08,30,45) },
-                new Activity {BabyID="855742135", Type=ActivityType.EAT,Time=new DateTime(2017,05,28,08,52,05) },
+                new Activity {ActId = 1, Id="1", Type=ActivityType.ARRIVE,CreateDate=new DateTime(2017,05,28,07,30,45) , Time="07:30"},
+                new Activity {ActId = 2, Id="2", Type=ActivityType.ARRIVE,CreateDate=new DateTime(2017,05,28,07,33,15), Time ="07:33" },
+                new Activity {ActId = 3, Id="1", Type=ActivityType.EAT,CreateDate=new DateTime(2017,05,28,08,30,45),Time ="08:30", Remark="Formula 120ml" },
+                new Activity {ActId = 4, Id="3", Type=ActivityType.EAT,CreateDate=new DateTime(2017,05,28,08,52,05), Time = "08:52" },
             };
+
+            ActivityID = Activities.Last().ActId+1;
         }
-                
-               
 
     }
 }

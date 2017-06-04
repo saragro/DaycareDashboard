@@ -1,33 +1,35 @@
 ﻿[
-  {
-    "babyId": "123456789",
-    "babyName": "Avi Kaplan",
+    {
+        "babyId": "123456789",
+        "babyName": "Avi Kaplan",
 
-    "avialbleActivities": [
-      {
-        "actType": 1,
-        "isEnabled": false
-      },
-      {
-        "actType": 2,
-        "isEnabled": false
-      },
-      {
-        "actType": 3,
-        "isEnabled": false
-      },
-      {
-        "actType": 4,
-        "isEnabled": false
-      },
-      {
-        "actType": 5,
-        "isEnabled": true
-      },
-      {
-        "actType": 6,
-        "isEnabled": false
-      }
-    ]
-  }
+        "avialbleActivities": [
+            {
+                "actType": 1,
+                "isEnabled": false
+            },
+            {
+                "actType": 2,
+                "isEnabled": false
+            },
+            {
+                "actType": 3,
+                "isEnabled": false
+            },
+            {
+                "actType": 4,
+                "isEnabled": false
+            },
+            {
+                "actType": 5,
+                "isEnabled": true
+            },
+            {
+                "actType": 6,
+                "isEnabled": false
+            }
+        ],
+
+        "lastActivity" : 4
+    }
 ]

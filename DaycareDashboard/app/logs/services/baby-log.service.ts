@@ -1,15 +1,17 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
+import "rxjs/add/operator/toPromise";
+
 import { BabyLog, Baby } from "../index"
 
 @Injectable()
 export class BabyLogService {
 
-    private logUrl = 'app/assets/log.json';
-    private babyListUrl = 'app/assets/babyList.json';
+    private logUrl = 'api/daycare/getBabyActivitiesLog';
+    private babyListUrl = 'api/daycare/getBabies';
     private headers = new Headers({ 'Content-Type': 'application/json' })
 
     constructor(private http: Http) {
@@ -30,9 +32,10 @@ export class BabyLogService {
 
     filterBabyLogByBabyId(babyId: string): Observable<BabyLog> {
         console.log('filter by '+babyId);
-        return this.http.get(this.logUrl)
-            .map(this.extractData)
-            .catch(this.handleError);
+
+		  var url = `api/daycare/getBabyById?id=${babyId}`;
+			return this.http.post(url, null).map(this.extractData).catch(this.handleError);
+            
     }
 
     private extractData(response: Response): any {

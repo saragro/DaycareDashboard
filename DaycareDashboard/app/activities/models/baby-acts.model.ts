@@ -1,8 +1,9 @@
 ﻿import { AvailableActivity } from "./available-acts.model";
+import { ActivityType } from "../index";
 
 export interface BabyActs {
-    babyId: string;
-    babyName: string;
+    id: string;
+    name: string;
     avialbleActivities :AvailableActivity[]
-   
+    lastActivity : ActivityType
 }
