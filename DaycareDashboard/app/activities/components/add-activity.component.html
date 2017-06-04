@@ -2,9 +2,9 @@
     <ul>
         <li *ngFor="let baby of babyActs">
             <div>
-                {{baby.babyName}}
+                {{baby.name}}
                 <span  *ngFor="let act of baby.avialbleActivities">                
-                    <button [ngClass]="{'disabled' : !act.isEnabled}" (click)="addActivity(baby.babyId,act.actType)">{{act.actType | actPipe}}</button>
+                    <button [ngClass]="{'disabled' : !act.isEnabled}" (click)="addActivity(baby.id,act.actType)">{{act.actType | actPipe}}</button>
                   </span>
             </div>
         </li>

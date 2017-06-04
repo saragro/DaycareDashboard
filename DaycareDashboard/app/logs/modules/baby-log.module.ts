@@ -4,9 +4,10 @@ import { BabyLogComponent, FilterBabyLogComponent, BabyLogService} from "../inde
 import { HttpModule } from "@angular/http";
 import { CalendarModule } from 'primeng/primeng';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../../shared/index';
 
 @NgModule({
-    imports: [CommonModule, HttpModule, FormsModule, CalendarModule],
+    imports: [CommonModule, HttpModule, FormsModule, CalendarModule, SharedModule],
     exports: [FilterBabyLogComponent],
     declarations: [BabyLogComponent, FilterBabyLogComponent],
     providers: [BabyLogService],

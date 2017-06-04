@@ -15,6 +15,8 @@ namespace DaycareDashboard.Models
         public string NannyId { get; set; }
         public string Year { get; set; }
         public List<Activity> ActsLog { get; set; }
+        public ActivityType LastActivity { get; set; }
+        public List<AvailableActivity> AvialbleActivities { get; set; }
     }
 }
 

@@ -8,15 +8,17 @@ import { BabyActs, ActivityType, AvailableActivity } from "../index"
 @Injectable()
 export class AddActivityService {
 
-    private url = 'app/assets/activity.json';
-    private headers = new Headers({ 'Content-Type': 'application/json' })
-
+    private url1 = 'app/assets/activity.json';
+    private headers = new Headers({ 'Content-Type': 'application/json' });
+	    private logUrl = 'api/daycare/getBabyAndActivities';
     constructor(private http: Http) {
 
     }
 
     getBabiesActivities(): Observable<BabyActs[]> {
-        return this.http.get(this.url)
+		
+
+        return this.http.get(this.logUrl)
             .map(this.extractData)
             .catch(this.handleError);
     }
@@ -61,6 +63,8 @@ export class AddActivityService {
     }
 
     addActivityToBabyLog(baby: BabyActs, actId: number) {
-        console.log(baby.babyName + " - " + baby.babyId, ActivityType[actId], new Date);
+        console.log(baby.name + " - " + baby.id, ActivityType[actId], new Date);
+		var url = `api/daycare/saveNewActivity?babyId=${baby.id}&actType=${actId}`;
+		this.http.post(url, null).subscribe(x => { });
     }
 }
