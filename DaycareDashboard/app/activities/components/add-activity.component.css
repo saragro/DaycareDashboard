@@ -1,6 +1,40 @@
-﻿.disabled{
-    opacity:0.8;
-    pointer-events:none;
-
+﻿.disabled {
+    opacity: 0.5;
+    pointer-events: painted;
+    padding: 16px 16px;
+    background-color: #35d097;
+    margin: 6px 8px 6px 8px;
+    min-width: 88px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: lowercase;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: solid rgba(0, 0, 0, 0.84);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: not-allowed;
 }
 
+.enabled {
+    padding: 16px 16px;
+    background-color: #35d097;
+    margin: 6px 8px 6px 8px;
+    min-width: 88px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+    text-decoration: none;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: solid rgba(0, 0, 0, 0.84);
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+    .enabled:hover {
+        background-color: white;
+        color: #d5a8a8;
+    }

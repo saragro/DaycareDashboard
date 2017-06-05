@@ -25,7 +25,7 @@ export class LoginNannyComponent implements OnInit{
             (isAuthorized) => {
                 if (isAuthorized) {
                     sessionStorage.setItem('userRole', 'nanny');
-                    this.router.navigate(['log']);
+                    this.router.navigate(['addAct']);
                 } else {
                     //TODO show error message
                 }

@@ -1,5 +1,8 @@
 ﻿import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { BabyLog, BabyLogService, Baby } from '../index';
+import { ActivatedRoute, Params, Router } from "@angular/router";
+import { Subscription } from "rxjs";
+
 
 @Component({
     selector: 'filter-baby-log',
@@ -9,8 +12,8 @@ import { BabyLog, BabyLogService, Baby } from '../index';
 export class FilterBabyLogComponent implements OnInit, OnChanges{
     babyLog: BabyLog;
     babies: Baby[];
-
-    constructor(private logService: BabyLogService) {
+	sub: Subscription;
+    constructor(private logService: BabyLogService,  private route: ActivatedRoute, private router: Router) {
 
     }
 
@@ -19,9 +22,14 @@ export class FilterBabyLogComponent implements OnInit, OnChanges{
     }
 
     ngOnInit() {
-        this.logService.getActivityLogsForBaby().subscribe(babyLog =>
-            this.babyLog = babyLog
-        );
+
+	  this.sub = this.route.params
+            .switchMap((x: Params) => this.logService.getActivityLogsForBaby(x["id"]))
+            .subscribe(babyLog => {
+                this.babyLog = babyLog
+            });
+
+    
 		console.log(this.babyLog);
         this.logService.getBabyList().subscribe(babies =>  this.babies = babies );
     }

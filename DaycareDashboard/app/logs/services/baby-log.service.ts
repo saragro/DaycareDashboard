@@ -18,8 +18,9 @@ export class BabyLogService {
 
     }
 
-    getActivityLogsForBaby(): Observable<BabyLog> {
-        return this.http.get(this.logUrl)
+    getActivityLogsForBaby(babyId:string): Observable<BabyLog> {
+		let url = `api/daycare/getBabyById?id=${babyId}`;
+        return this.http.get(url)
             .map(this.extractData)
             .catch(this.handleError);
     }
