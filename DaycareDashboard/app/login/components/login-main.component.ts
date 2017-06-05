@@ -7,7 +7,7 @@ import { Router } from "@angular/router";
     selector: 'login-main',
     templateUrl: './app/login/components/login-main.component.html',
     styleUrls: ['./app/login/components/login-main.component.css'],
-    encapsulation: ViewEncapsulation.None,
+    //encapsulation: ViewEncapsulation.None,
 })
 export class LoginMainComponent implements OnInit{
 
