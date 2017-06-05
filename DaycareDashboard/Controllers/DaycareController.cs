@@ -50,7 +50,7 @@ namespace DaycareDashboard.Controllers
             return babies;
         }
 
-        [Route("getBabyActivitiesLog1")]
+        [Route("getBabyActivitiesLogById")]
         public Baby GetBabyById(string id)
         {
             var baby = DB.Babies.FirstOrDefault(b => b.Id == id);
