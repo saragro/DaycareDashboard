@@ -25,6 +25,7 @@
     left: calc(50% - 350px);
     z-index: 2;
     text-align: center;
+    font-weight:bold;
 }
 
 .header div {
@@ -32,11 +33,27 @@
     color: #fff;
     font-family: 'Exo', sans-serif;
     font-size: 28px;
-    font-weight: 200;
+    background: transparent!important;
+    border:none!important;
 }
 
-.header div span {
-    color: #88319d !important;
+.ui-button {
+    background: transparent !important;
+    border: none !important;
+    float: left;
+    color: white!important;
+    font-family: 'Exo', sans-serif;
+    font-size: 28px;
+}
+
+
+.ui-button:hover {
+    color: #e4f56e !important;
+}
+
+.ui-state-active {
+    text-decoration: underline !important;
+    color: #e4f56e !important;
 }
 
 .body {
@@ -47,12 +64,12 @@
     bottom: -40px;
     width: auto;
     height: auto;
-    background-image: url("app/assets/images/login-bg.png");
+    background-image: url(https://wallpaperbrowse.com/media/images/background-pictures-2.jpg);
     background-size: cover;
     -webkit-filter: blur(8px);
     z-index: 0;
 }
 
-.ui-selectbutton {
+.my-selectbutton {
     background: transparent;
 }

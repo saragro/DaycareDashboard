@@ -9,8 +9,9 @@ import { IfsModule } from '../../ifs/index';
 import { SharedModule } from '../../shared/index';
 
 
+
 @NgModule({
-    imports: [CommonModule, HttpModule, FormsModule, CalendarModule, IfsModule, RouterModule.forChild(routes), SharedModule],
+    imports: [CommonModule, HttpModule, FormsModule, CalendarModule, IfsModule, SharedModule, RouterModule.forChild(routes)],
     exports: [FilterBabyLogComponent],
     declarations: [BabyLogComponent, FilterBabyLogComponent],
     providers: [BabyLogService],
