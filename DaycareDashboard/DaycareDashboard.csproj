@@ -113,6 +113,7 @@
     <TypeScriptCompile Include="app\login\services\login.service.ts" />
     <TypeScriptCompile Include="app\logs\logs.routing.ts" />
     <TypeScriptCompile Include="app\logs\models\baby.model.ts" />
+    <Content Include="app\root\components\root.component.css" />
     <Content Include="app\root\components\root.component.html" />
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
@@ -192,7 +193,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>62037</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6209/</IISUrl>
+          <IISUrl>http://localhost:7777/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
