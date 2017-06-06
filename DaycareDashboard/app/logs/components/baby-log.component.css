@@ -39,6 +39,29 @@
     float: left;
     padding:10px;
     color: gray;
+
 }
 
 
+.disabled {
+    opacity: 0.8;
+    pointer-events: none;
+    border: none;
+}
+
+
+.btn {
+    padding: 8px;
+    background-color: #35d097;
+    margin: 6px 8px 6px 8px;
+    min-width: 88px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: lowercase;
+    font-weight: bold;
+    font-family:'Lucida Sans';
+    color: teal;
+    border-radius: 2px;
+    cursor: pointer;
+}

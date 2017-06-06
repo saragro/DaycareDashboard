@@ -21,11 +21,12 @@ export class FilterBabyLogComponent implements OnInit, OnChanges{
     }
 
     ngOnInit() {
-        let babyIdParam = this.route.params["babyId"];
+        let babyIdParam = this.route.snapshot.params["babyId"];
         if (babyIdParam) {
             this.logService.filterBabyLogByBabyId(babyIdParam)
                 .subscribe(babyLog => this.babyLog = babyLog);
-        } else {
+        } 
+		else {
             this.logService.getActivityLogsForBaby().subscribe(babyLog =>
                 this.babyLog = babyLog
             );

@@ -8,10 +8,11 @@
                 <span class="activity">
                     {{act.type | actPipe}}
                 </span>
-                <span class="remark">
-                    {{act.remark}}
-                </span>
+                
+                    <input type="text"  class="remark" [ngClass]="{'disabled' : !isNanny }" [(ngModel)]="act.remark">
+               
             </div>
+            <button class="btn" *ngIf="isNanny" (click)="updateActivity(act)">Save</button>
         </li>
     </ul>
 </div>

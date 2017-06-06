@@ -9,14 +9,25 @@ import { Activity, ActivityType, BabyLogService } from '../index';
 })
 export class BabyLogComponent {
     @Input() activities: Activity[];
+	isNanny :boolean;	
     
-    constructor(private logService: BabyLogService) {
+	constructor(private logService: BabyLogService) {
       
     }
 
     ngOnInit() {
         console.log(this.activities);
+		if(sessionStorage.getItem('userRole')=='nanny') {
+			this.isNanny= true;
+		}
+		else {
+			this.isNanny = false;
+		}
     }
+
+	updateActivity(act:Activity) {
+		this.logService.updateActivity(act);
+	}
  
 
 
