@@ -25,7 +25,7 @@ export class LoginParentComponent implements OnInit{
             (isAuthorized) => {
                 if (isAuthorized) {
                     sessionStorage.setItem('userRole', 'parent');
-                    this.router.navigate(['log', this.creds.babyId]);
+                    this.router.navigate(['log', { babyId: this.creds.babyId }]);
                 } else {
                     //TODO show error message
                 }

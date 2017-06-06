@@ -30,9 +30,13 @@ export class BabyLogService {
             .catch(this.handleError);
     }
 
-    filterBabyLogByBabyId(babyId: string): Observable<BabyLog> {
+    filterBabyLogByBabyId(babyId: string): Observable<any> {
         console.log('filter by '+babyId);
 
+		var url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
+		return this.http.get(url).map(this.extractData).catch(this.handleError);
+            
+    }
 		  let url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
 			return this.http.get(url)
             .map(this.extractData)
@@ -47,6 +51,8 @@ export class BabyLogService {
 
     private extractData(response: Response): any {
         let res = response.json();
+        console.log('res=' + res);
+
         return res;
     }
 
