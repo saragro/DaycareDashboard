@@ -1,11 +1,14 @@
-﻿<div>
+﻿<div class="body"></div>
+<div class="wrapper">
+    <h2>Add Babies' Activities</h2>
     <ul style="list-style-type:none">
         <li *ngFor="let baby of babyActs">
-            <div>
-                <div  [routerLink]="['/log', baby.id]">
-                    {{baby.name}}
+            <div class="baby-div">
+                <div class="baby-name-bg">
+                    <span class="baby-name" [routerLink]="['/log', baby.id]">
+                        {{baby.name}}
+                    </span>
                 </div>
-                <span></span>
                 <span  *ngFor="let act of baby.avialbleActivities" style="margin-left:10px">                
                     <button [ngClass]="{'disabled' : !act.isEnabled,  'enabled' : act.isEnabled}" (click)="addActivity(baby.id,act.actType)">{{act.actType | actPipe}}</button>
                   </span>
