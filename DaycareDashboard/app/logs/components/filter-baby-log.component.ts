@@ -21,24 +21,23 @@ export class FilterBabyLogComponent implements OnInit{
 
     ngOnInit() {
         let babyIdParam = this.route.snapshot.params["babyId"];
-        if (babyIdParam) { //parent
+        if (babyIdParam) {
             this.initBabyLog(babyIdParam);
-        } 
+        } else {
+            this.initBabyLog('1');
+        }
 
         this.logService.getBabyList().subscribe(babies => { 
             babies.forEach(baby =>
                 this.babies.push(new Baby(baby.id, baby.name)));
-        });  
+        }); 		 
+    }
 
-		 
-		
-		   this.selectViewModel.valueChanges.subscribe(x => {
-		   if(this.babyLog.baby){
-				this.filterByBabyId(this.babyLog.baby.id);
-				this.router.navigate(['log', { babyId: this.babyLog.baby.id }]);
-			}
-        });
-
+    onBabyChange(newBaby: Baby) {
+        this.babyLog.baby = newBaby;
+        let newBabyId = this.babyLog.baby.id;
+        this.filterByBabyId(newBabyId);
+        this.router.navigate(['log', { babyId: newBabyId}]);
     }
 
 	 filterByBabyId(babyId: string) {
@@ -48,7 +47,7 @@ export class FilterBabyLogComponent implements OnInit{
                 this.babyLog.actsLog = baby.actsLog;
                 console.log(this.babyLog);
             });
-    }
+      }
 
 	    initBabyLog(babyId: string) {
         this.logService.filterBabyLogByBabyId(babyId)
@@ -59,7 +58,7 @@ export class FilterBabyLogComponent implements OnInit{
                 this.babyLog.actsLog = baby.actsLog;
                 console.log(this.babyLog);
             });
-    }
+        }
 
 	filterBabyLogByDate () {
 	  this.logService.filterBabyLogByDate(this.babyLog.baby.id,this.babyLog.date)
