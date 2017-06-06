@@ -33,10 +33,6 @@ export class BabyLogService {
     filterBabyLogByBabyId(babyId: string): Observable<any> {
         console.log('filter by '+babyId);
 
-		var url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
-		return this.http.get(url).map(this.extractData).catch(this.handleError);
-            
-    }
 		  let url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
 			return this.http.get(url)
             .map(this.extractData)
