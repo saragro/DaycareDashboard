@@ -5,7 +5,7 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import "rxjs/add/operator/toPromise";
 
-import { BabyLog, Baby } from "../index"
+import { BabyLog, Baby , Activity} from "../index"
 
 @Injectable()
 export class BabyLogService {
@@ -18,9 +18,8 @@ export class BabyLogService {
 
     }
 
-    getActivityLogsForBaby(babyId:string): Observable<BabyLog> {
-		let url = `api/daycare/getBabyById?id=${babyId}`;
-        return this.http.get(url)
+    getActivityLogsForBaby(): Observable<BabyLog> {
+		return this.http.get(this.logUrl)
             .map(this.extractData)
             .catch(this.handleError);
     }
@@ -34,10 +33,26 @@ export class BabyLogService {
     filterBabyLogByBabyId(babyId: string): Observable<any> {
         console.log('filter by '+babyId);
 
-		var url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
-		return this.http.get(url).map(this.extractData).catch(this.handleError);
+		  let url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
+			return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
             
     }
+	filterBabyLogByDate(babyId: string, date :Date): Observable<any> {
+        console.log('filter by '+babyId +date );
+
+		  let url = `api/daycare/getBabyActivitiesLogByDate?id=${babyId}&date=${date.toISOString()}`;
+			return this.http.get(url)
+            .map(this.extractData)
+            .catch(this.handleError);
+            
+    }
+
+	updateActivity(act:Activity) {
+		var url = `api/daycare/editActivityRemark?&actId=${act.actId}&remark=${act.remark}`;
+		this.http.post(url, null).subscribe(x => { });
+	}
 
     private extractData(response: Response): any {
         let res = response.json();

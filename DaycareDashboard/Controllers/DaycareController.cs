@@ -44,7 +44,7 @@ namespace DaycareDashboard.Controllers
             var babies = DB.Babies;
             foreach (var baby in babies)
             {
-                baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
+                baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id && act.CreateDate.Date == DateTime.Now.Date));
             }
 
             return babies;
@@ -59,7 +59,7 @@ namespace DaycareDashboard.Controllers
                 if (baby.ActsLog == null)
                     baby.ActsLog = new List<Activity>();
                 baby.ActsLog.Clear();
-                baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
+                baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id && act.CreateDate.Date==DateTime.Now.Date));
             }
             return baby;
         }
@@ -74,7 +74,7 @@ namespace DaycareDashboard.Controllers
                     baby.ActsLog = new List<Activity>();
                 baby.ActsLog.Clear();
                 baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id));
-                var lastActivity = baby.ActsLog.OrderByDescending(b => b.CreateDate).FirstOrDefault();
+                var lastActivity = baby.ActsLog.OrderByDescending(b => b.CreateDate).OrderByDescending(x=>x.ActId).FirstOrDefault();
                 baby.LastActivity = lastActivity != null ? lastActivity.Type : ActivityType.GO_HOME;
                 baby.AvialbleActivities = InitActivities();
             }
@@ -127,6 +127,19 @@ namespace DaycareDashboard.Controllers
             return true;
         }
 
+        [Route("getBabyActivitiesLogByDate")]
+        public Baby GetBabyActivitiesLogByDate(string id, DateTime date)
+        {
+            var baby = DB.Babies.FirstOrDefault(b => b.Id == id);
+            if (baby != null)
+            {
+                if (baby.ActsLog == null)
+                    baby.ActsLog = new List<Activity>();
+                baby.ActsLog.Clear();
+                baby.ActsLog.AddRange(DB.Activities.Where(act => act.Id == baby.Id && act.CreateDate.Date == date.Date));
+            }
+            return baby;
+        }
 
         // POST api/<controller>
         public void Post([FromBody]string value)
