@@ -16,10 +16,10 @@ export class LoginService {
     }
 
     loginParent(creds: ParentCredentials): Observable<boolean> {
-        var url = `/api/daycare/LoginParent/?parentId=${creds.parentId}
+        var url = `/api/daycare/LoginParent?parentId=${creds.parentId}
                     &babyId=${creds.babyId}&year=${creds.year}`;
         return this.http.post(url, null).map(this.extractData)
-            .catch(this.handleError);       
+            .catch(this.handleError);
     }
 
     loginNanny(creds: NannyCredentials): Observable<boolean> {

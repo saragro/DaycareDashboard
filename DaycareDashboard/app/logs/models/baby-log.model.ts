@@ -1,6 +1,6 @@
 ﻿import { Activity, Baby } from "../index";
 
-export interface BabyLog {
+export class BabyLog {
     baby: Baby;
     date: Date;
     actsLog: Activity[];

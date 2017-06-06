@@ -5,5 +5,7 @@
         </select>'s activities on
         <p-calendar dateFormat="dd/mm/yy" [(ngModel)]="babyLog.date" [inputStyleClass]="datepicker"></p-calendar>
     </h3>
+    {{babies | json}}
+    {{babyLog.baby | json}}
     <baby-log [activities]="babyLog.actsLog"></baby-log>
 </div>

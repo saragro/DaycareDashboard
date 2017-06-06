@@ -3,6 +3,5 @@ import { FilterBabyLogComponent, AuthGuard } from "./index";
 
 
 export let routes: Routes = [
-    { path: 'log/:babyId', component: FilterBabyLogComponent, pathMatch: 'full', canActivate: [AuthGuard] },
     { path: 'log', component: FilterBabyLogComponent, pathMatch: 'full', canActivate: [AuthGuard] },
 ];

@@ -30,16 +30,18 @@ export class BabyLogService {
             .catch(this.handleError);
     }
 
-    filterBabyLogByBabyId(babyId: string): Observable<BabyLog> {
+    filterBabyLogByBabyId(babyId: string): Observable<any> {
         console.log('filter by '+babyId);
 
-		  var url = `api/daycare/getBabyById?id=${babyId}`;
-			return this.http.post(url, null).map(this.extractData).catch(this.handleError);
+		var url = `api/daycare/getBabyActivitiesLogById?id=${babyId}`;
+		return this.http.get(url).map(this.extractData).catch(this.handleError);
             
     }
 
     private extractData(response: Response): any {
         let res = response.json();
+        console.log('res=' + res);
+
         return res;
     }
 
