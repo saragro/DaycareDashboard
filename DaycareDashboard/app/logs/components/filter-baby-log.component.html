@@ -1,4 +1,4 @@
-﻿<div class="log-header" *ngIf="babyLog">
+﻿<div class="log-header">
     <h3>
         <select [(ngModel)]="babyLog.baby">
             <option *ngFor="let baby of babies" [ngValue]="baby">{{baby.name}}</option>

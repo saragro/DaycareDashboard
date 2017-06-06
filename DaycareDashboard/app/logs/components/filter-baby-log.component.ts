@@ -6,10 +6,10 @@ import { NgModel } from "@angular/forms";
 @Component({
     selector: 'filter-baby-log',
     templateUrl: './app/logs/components/filter-baby-log.component.html',
-    //styleUrls: ['./app/logs/components/filter-baby-log.component.css'],
+    styleUrls: ['./app/logs/components/filter-baby-log.component.css'],
 })
 export class FilterBabyLogComponent implements OnInit{
-    babyLog: BabyLog;
+    babyLog: BabyLog = new BabyLog();
     babies: Baby[] = [];
 
     constructor(private logService: BabyLogService, private route: ActivatedRoute) {
@@ -26,7 +26,6 @@ export class FilterBabyLogComponent implements OnInit{
             //);
         }
         this.logService.getBabyList().subscribe(babies => { 
-            console.log('babies=' + babies);
             babies.forEach(baby =>
                 this.babies.push(new Baby(baby.id, baby.name)));
         });         
