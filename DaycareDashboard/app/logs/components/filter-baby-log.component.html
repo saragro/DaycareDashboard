@@ -2,9 +2,8 @@
 <div class="wrapper">
     <h2>View Baby's Activity Log</h2>
     <div class="log-header">
-        {{babyLog.baby | json}}
         <h3>
-            <select [ngModel]="babyLog.baby" (ngModelChange)="onBabyChange($event)">
+            <select [ngModel]="babyLog.baby" (ngModelChange)="onBabyChange($event)" [ngClass]="{'disabled': !isNanny()}">
                 <option *ngFor="let baby of babies" [ngValue]="baby">{{baby.name}}</option>
             </select>'s activities on
             <p-calendar dateFormat="dd/mm/yy" [(ngModel)]="babyLog.date" [inputStyleClass]="datepicker" (onSelect)="filterBabyLogByDate()"></p-calendar>

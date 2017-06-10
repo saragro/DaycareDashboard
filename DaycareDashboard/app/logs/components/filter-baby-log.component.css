@@ -74,6 +74,10 @@ h2 {
     cursor: pointer;
 }
 
+.disabled {
+    pointer-events: none;
+}
+
 .baby-name:hover {
     color: blue;
 }
